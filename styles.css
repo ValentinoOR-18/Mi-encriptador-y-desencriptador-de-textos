@@ -1,0 +1,214 @@
+:root{
+    --color-blue: #000000;
+    --color-boton1: rgb(118, 209, 216);
+    --color-boton2: #ffffff;
+    --color-boton3: rgb(255, 255, 255);
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body{
+    background: #ffffff;
+    
+}
+/*PARTE DEL HEADER*/
+header{
+    background-color: #ffffff;
+}
+
+.header{
+    width: 100%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.main{
+    background-color: rgb(255, 255, 255);
+    width: 80.5%;
+    margin: auto 40px auto auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: calc(100vh - 91px - 72px);
+    align-items: end;
+}
+
+.logo_alura{
+    margin-top: 40px;
+}
+
+/*PARTE DEL MAIN*/
+
+.izquierda{
+    background-color: #ffffff;
+    /*width: 60%;*/
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.texto_ingresado{
+    width: 80%;
+    font-family:"Poppins", sans-serif;
+    font-size: 32px;
+    color: black;
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.texto_ingresado::placeholder{
+    color: black;
+}
+
+/*.izquierda_footer{   
+}*/
+
+.izquierda_informacion{
+    font-size: 12px;
+    color: var(--color-boton3);
+}
+
+.botones_izquierdos{
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+.boton_encriptar,
+.boton_desencriptar,
+.boton_copiar{
+    border: 2.5px solid black;
+    cursor: pointer;
+    max-width: 328px;
+    width: 40%;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 16px;
+    background-color: var(--color-boton1);
+    color: white;
+}
+
+.boton_encriptar{
+    background-color: var(--color-boton1);
+    color: var(--color-blue);
+}
+
+.boton_desencriptar{
+    background-color: var(--color-boton2);
+    color: var(--color-blue);
+}
+
+
+
+
+
+
+.derecha{
+    background-color: rgb(118, 209, 216);
+    height: calc(100% + 48px);
+    border-radius: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    box-shadow: 0px 24px 32px -8px rgb(118, 209, 216);
+}
+
+.derecha.modificaciones{
+    justify-content: space-between;
+}
+
+.señora{
+    width: 100%;
+}
+
+.oculto{
+    display: none;
+}
+    
+
+.mensaje_final{
+    background-color: rgb(118, 209, 216);
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    resize: none;
+
+}
+
+.mensaje_final.modificaciones{
+    height: 90%;
+    font-weight: 400;
+    text-align: left;
+}
+
+.mensaje_derecha{
+    font-family:"Poppins", sans-serif;
+    color: var(--color-blue);
+    font-size: 16px;
+    text-align: center;
+}
+
+.boton_copiar{
+    max-width: 528px;
+    width: 40%;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 16px;
+    width: 100%;
+    display: none;
+    background:transparent;
+    color: var(--color-blue);
+          
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 70% 30%;
+        width: auto;
+        margin: auto 40px;
+    }
+
+    .botones_izquierdos{
+        justify-content: center;
+    }
+
+    .boton_encriptar,
+    .boton_desencriptar{
+        width: 45%;
+    }
+
+    .derecha{
+        height: 100%;
+    }
+
+    .señora{
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .main{
+        margin: auto 16px;
+    }
+    
+    .boton_encriptar,
+    .boton_desencriptar{
+        max-width: 100%;
+        width: 100%;
+    }
+}
